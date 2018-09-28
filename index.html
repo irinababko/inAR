@@ -7,14 +7,35 @@
     <title>INAR</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/weglot.min.css">
 </head>
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.setup({
+        api_key: 'wg_2954eb92fc66a063129204af399d27ab4',
+        originalLanguage: 'en',
+        destinationLanguages : 'de',
+        styleOpt : { fullname: false , withname: true , is_dropdown: true , classF: "wg-flags flag-3" },
+        exceptions: "#not-this-element,.not-this-class.p",
+        excludePaths: "",
+        dynamic: ".a-container-of-dynamic-content",
+        autoSwitch: true,
+        translateSearch: false
+    });
+</script>
+<script>
+    var li = document.querySelector('.weglot-container');
+    var weglot = document.getElementById('weglot');
+    li.appendChild(weglot);
+</script>
 <body>
 
-    <main>
+    <main class="has-animations">
         <header class="header">
             <a href="#"><img src="img/logo.png" alt="logo"></a>
             <ul class="header__nav">
@@ -22,28 +43,40 @@
                 <li class="header__nav-menu"><a href="about.html">about company</a></li>
                 <li class="header__nav-menu"><a href="product.html">product</a></li>
                 <li class="header__nav-menu contacts"><a href="contacts.html">contacts</a></li>
+                <!--<li class="header__nav-menu" id="weglot"><a href="#">weglot</a></li>-->
+                <li class="header__nav-menu"><a href="#">
+                    login
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" id="icon_hdr">
+                        <path d="M12.3884 14.4575C12.1083 14.7376 12.1083 15.1895 12.3884 15.4659C12.6685 15.746 13.1204 15.746 13.3968 15.4659L18.3231 10.5359C18.4725 10.3866 18.5359 10.1886 18.5247 9.9944C18.5359 9.80019 18.4725 9.60224 18.3231 9.45285L13.3968 4.53035C13.1167 4.25023 12.6648 4.25023 12.3884 4.53035C12.1083 4.81046 12.1083 5.26237 12.3884 5.53875L16.1345 9.28478H0.713352C0.321195 9.28478 0 9.60598 0 10.0019C0 10.3978 0.321195 10.7152 0.713352 10.7152H16.1345L12.3884 14.4575ZM20 0H5.71429C4.13819 0 2.85714 1.28105 2.85714 2.85714V5.71429H4.28758V2.85714C4.28758 2.06909 4.92624 1.4267 5.71802 1.4267H20.0037C20.7918 1.4267 21.4342 2.06536 21.4342 2.85714V17.1429C21.4342 17.9309 20.7955 18.5733 20.0037 18.5733H5.71429C4.92624 18.5733 4.28385 17.9346 4.28385 17.1429V14.2857H2.85714V17.1429C2.85714 18.719 4.13819 20 5.71429 20H20C21.5761 20 22.8571 18.719 22.8571 17.1429V2.85714C22.8571 1.28105 21.5761 0 20 0Z"/>
+                    </svg>
+                </a></li>
+                <li class="header__nav-menu"><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" id="icon_hdr">
+                        <path d="M10 0C4.47581 0 0 4.47581 0 10C0 15.5242 4.47581 20 10 20C15.5242 20 20 15.5242 20 10C20 4.47581 15.5242 0 10 0ZM15.7661 15.5242C15.7661 15.2823 15.7661 15.121 15.7661 15.121C15.7661 13.75 14.1935 13.2661 13.3468 12.9032C13.0242 12.7823 12.4597 12.5 11.8548 12.2177C11.6532 12.1371 11.4919 11.8548 11.4516 11.6532L11.371 11.0081C11.8145 10.6048 12.2177 10 12.2984 9.35484H12.4194C12.5806 9.35484 12.7419 9.23387 12.7419 9.07258L12.9032 8.06452C12.9435 7.8629 12.7419 7.74194 12.5806 7.74194C12.5806 7.70161 12.5806 7.70161 12.5806 7.70161C12.621 7.58065 12.621 7.45968 12.621 7.33871C12.621 7.25806 12.621 7.1371 12.6613 7.05645C12.6613 6.57258 12.5806 6.16935 12.4597 5.96774C12.3387 5.64516 12.1371 5.32258 11.8548 5.08065C11.0887 4.35484 10.1613 4.03226 9.39516 4.6371C8.87097 4.55645 8.22581 4.79839 7.78226 5.32258C7.54032 5.60484 7.37903 5.92742 7.29839 6.25C7.25806 6.45161 7.21774 6.69355 7.17742 6.97581C7.17742 7.25806 7.17742 7.54032 7.25806 7.74194C7.09677 7.74194 6.93548 7.8629 6.93548 8.06452L7.09677 9.07258C7.1371 9.23387 7.25806 9.35484 7.41935 9.35484H7.5C7.66129 10.0806 8.02419 10.6452 8.42742 11.0484L8.46774 11.6532C8.42742 11.8548 8.26613 12.1371 8.06452 12.2177C7.5 12.5 6.93548 12.7823 6.57258 12.9032C5.76613 13.2258 4.15323 13.75 4.15323 15.121V15.4435C2.82258 14.0323 2.01613 12.0968 2.01613 10C2.01613 5.60484 5.60484 2.01613 10 2.01613C14.3952 2.01613 17.9839 5.60484 17.9839 10C18.0242 12.1371 17.1371 14.0726 15.7661 15.5242Z"/>
+                    </svg>
+                    user
+                </a></li>
             </ul>
         </header>
-        <section class="home-main">
-            <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay muted loop>
-                <source src="https://mdbootstrap.com/img/video/Lines-min.mp4" type="video/mp4">
-            </video>
-            <div class="content-intro">
-                <p>open the door into the future of your business</p>
-            </div>
-        </section>
+        <!--<section class="home-main">-->
+            <!--<video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay muted loop>-->
+                <!--<source src="https://mdbootstrap.com/img/video/Lines-min.mp4" type="video/mp4">-->
+            <!--</video>-->
+            <!--<div class="content-intro">-->
+                <!--<p>open the door into the future of your business</p>-->
+            <!--</div>-->
+        <!--</section>-->
         <section class="home" id="gradient">
             <div id="particles-js"></div>
             <div class="text"></div>
         </section>
         <section class="about">
-            <div class="about__l">
+            <div class="about__l wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
                 <h3><span>about</span> company</h3>
-                <p>inAR is a company that is specialized on creating on creating Augmented and Mixed reality software applications for furniture brands, interior designers & real estate. What do we do different? We create apps with an outstanding UI and UX design and complete CMS.<br>
-                    We are happy to announce the release of our inAR app. Now you have the great chance to stand out from the raw of competitors and boost your sails
+                <p>We are a young start up , a team of professionals, united with one aim to make Augmented and Mixed reality closer to everyone. Bring it into every home. What do we do different? We don’t have multiple projects, we are not specialized on different branches where AR and MR might be used. We gathered together from different spheres : it, management, marketing, interior design, 3d design with the only aim to create  an outstanding and at the same time simple UI and UX software application for furniture retailors , home decorators, for everyone of us.We don’t give you just a white lable, we don’t create just an app. Together with inAR app we give you full customization, update, improvement, our 24/ 7 technical support , hot line, content management support, full integration into your online shop, we provide you with our AR-commerce concept. Working with us, you get not only the app, you get a team of passionate AR professionals
                 </p>
             </div>
-            <div class="about__r">
+            <div class="about__r wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
                 <img class="pic1" src="img/iphoneX.png" alt="iphoneX">
                 <img class="pic2" src="img/iPad.png" alt="iPad">
                 <img class="pic3" src="img/iphoneX2.png" alt="iphoneX2">
@@ -51,23 +84,65 @@
         </section>
         <section class="video">
             <div class="video__mask"></div>
-            <div class="video__btn"><a class="btn" href="#" title="Play video"></a></div>
-            <h3><span>Wow!</span> The best application ever</h3>
+            <!--<div class="video__btn"><a class="btn-play" href="#" title="Play video"></a></div>-->
+            <div class="wrap-video">
+                <img src="img/iPad-video.png" alt="">
+                <video class="video-intro" poster="img/fon-1.png" controls>
+                    <source src="https://mdbootstrap.com/img/video/Lines-min.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h3><span>wow!</span> The best application ever</h3>
         </section>
         <section class="team">
-            <h3><span>our</span> team</h3>
-            <p>our inspired team is working day and night for you and together we reach success</p>
-            <div class="members">
+            <h3 class="hero-title"><span>our</span> team</h3>
+            <p class="hero-paragraph">our inspired team is working day and night for you and together we reach success</p>
+            <div class="members hero-cta">
                 <div class="members__content">
                     <div class="members__content-item">
                         <div class="member-img bg-gradient">
                             <div class="img-prof">
-                                <img src="img/team-2.jpg" width="200" height="200" alt="member">
+                                <img src="img/member-1.png" width="200" height="200" alt="member">
                                 <div class="mask-1"></div>
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Alexandra Alexandrova</h4>
+                            <h4>Alexandr Alexandrov</h4>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                    <div class="members__content-item">
+                        <div class="member-img bg-gradient">
+                            <div class="img-prof">
+                                <img src="img/member-2.png" width="200" height="200" alt="member">
+                                <div class="mask-1"></div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Alexandr Alexandrov</h4>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                    <div class="members__content-item">
+                        <div class="member-img bg-gradient">
+                            <div class="img-prof">
+                                <img src="img/member-3.jpg" width="200" height="200" alt="member">
+                                <div class="mask-1"></div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Alexandr Alexandrov</h4>
+                            <p>Designer</p>
+                        </div>
+                    </div>
+                    <div class="members__content-item">
+                        <div class="member-img bg-gradient">
+                            <div class="img-prof">
+                                <img src="img/member-4.jpg" width="200" height="200" alt="member">
+                                <div class="mask-1"></div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Alexandr Alexandrov</h4>
                             <p>Designer</p>
                         </div>
                     </div>
@@ -86,36 +161,12 @@
                     <div class="members__content-item">
                         <div class="member-img bg-gradient">
                             <div class="img-prof">
-                                <img src="img/team-2.jpg" width="200" height="200" alt="member">
+                                <img src="img/team-5.jpg" width="200" height="200" alt="member">
                                 <div class="mask-1"></div>
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Alexandra Alexandrova</h4>
-                            <p>Designer</p>
-                        </div>
-                    </div>
-                    <div class="members__content-item">
-                        <div class="member-img bg-gradient">
-                            <div class="img-prof">
-                                <img src="img/team-2.jpg" width="200" height="200" alt="member">
-                                <div class="mask-1"></div>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Alexandra Alexandrova</h4>
-                            <p>Designer</p>
-                        </div>
-                    </div>
-                    <div class="members__content-item">
-                        <div class="member-img bg-gradient">
-                            <div class="img-prof">
-                                <img src="img/team-2.jpg" width="200" height="200" alt="member">
-                                <div class="mask-1"></div>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Alexandra Alexandrova</h4>
+                            <h4>Alexandr Alexandrov</h4>
                             <p>Designer</p>
                         </div>
                     </div>
@@ -138,21 +189,53 @@
         </section>
         <footer class="footer">
             <div class="footer__nav">
-                <a href="#"><img src="img/logo-footer.png" alt="logo"></a>
-                <ul class="footer__nav-1">
+                <div class="footer__nav-logo">
+                    <a href="#"><img src="img/logo-footer.png" alt="logo"></a>
+                    <div class="dwnld">
+                        <a href="#">
+                            <i class="fab fa-apple"></i>
+                            <p>download in</p><br>
+                            <p>App Store</p>
+                        </a>
+                    </div>
+                    <a href="#"></a>
+                </div>
+                <div class="wrap-nav">
                     <h3><span>site</span> map</h3>
-                    <li class="footer__nav-menu"><a href="index.html">home</a></li>
-                    <li class="footer__nav-menu"><a href="about.html">about company</a></li>
-                    <li class="footer__nav-menu"><a href="product.html">product</a></li>
-                    <li class="footer__nav-menu"><a href="contacts.html">contacts</a></li>
-                </ul>
-                <ul class="footer__nav-1 footer__nav-2">
+                    <ul class="footer__nav-1">
+                        <li class="footer__nav-menu"><a href="index.html">home</a></li>
+                        <li class="footer__nav-menu"><a href="about.html">about company</a></li>
+                        <li class="footer__nav-menu"><a href="product.html">product</a></li>
+                        <li class="footer__nav-menu"><a href="contacts.html">contacts</a></li>
+                    </ul>
+                </div>
+                <div class="wrap-nav">
                     <h3><span>for</span> client</h3>
-                    <li class="footer__nav-menu"><a href="index.html">G.T.C.</a></li>
-                    <li class="footer__nav-menu"><a href="index.html">privacy policy</a></li>
-                </ul>
+                    <ul class="footer__nav-1 footer__nav-2">
+                        <li class="footer__nav-menu"><a href="index.html">G.T.C.</a></li>
+                        <li class="footer__nav-menu"><a href="index.html">privacy policy</a></li>
+                    </ul>
+                    <h3 class="support"><span>support</span> is:</h3>
+                    <ul class="footer__nav-1 footer__nav-2">
+                        <li class="footer__nav-menu"><a href="index.html">support@theinar.com</a></li>
+                    </ul>
+                </div>
+                <div class="wrap-nav">
+                    <h3><span>contact</span></h3>
+                    <ul class="footer__nav-1 footer__nav-2">
+                        <li class="footer__nav-menu contact">inAR GmbH<br>
+                            Augmented and Mixed Reality Software<br>
+                            Solutions & CMS for Retailers<br>
+                            CHE-281.791.079<br>
+                            5426 Lengnau AG<br>
+                            Switzerland<br>
+                            +41799557458<br>
+                            info@theinar.com
+                        </li>
+                    </ul>
+                </div>
                 <div class="footer__nav-soc">
-                    <a class="soc-1" href="#"><i class="fab fa-apple"></i></a>
+                    <a class="soc-1" href="#"><i class="fab fa-youtube"></i></a>
                     <a class="soc-1 soc-2" href="#"><i class="fab fa-instagram"></i></a>
                     <a class="soc-1 soc-3" href="#"><i class="fa fa-facebook"></i></a>
                 </div>
@@ -166,6 +249,7 @@
     <script src="js/typed.min.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/weglot.js"></script>
     <script src="https://use.fontawesome.com/1caac91b71.js"></script>
     <script src="js/main.js"></script>
     <!--<script>-->
@@ -174,5 +258,15 @@
             <!--typeSpeed: 50-->
         <!--});-->
     <!--</script>-->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-125021779-1'></script>
+    <script>window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-125021779-1', { 'anonymize_ip': true });
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
