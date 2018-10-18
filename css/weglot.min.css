@@ -9,7 +9,7 @@
 
 .country-selector a{padding:0 10px;outline:none;text-decoration:none;float:none!important}
 .country-selector a:focus{outline:none}
-.wg-drop.country-selector a{display:block;height:37px;line-height:36px;color:#000;padding:0 10px;white-space:nowrap}
+.wg-drop.country-selector a{display:block;height:37px;line-height:37px;color:#000;padding:0 10px;white-space:nowrap}
 .wg-drop.country-selector :not(.wgcurrent) a{width:100%;box-sizing:border-box}
 .wg-list.country-selector a:hover{text-decoration:underline;color:#00a0d2}
 
@@ -100,4 +100,7 @@ body.weglot-interactive .weglot-container:not(.wg-default){cursor:move}
 }
 .wg-drop.country-selector .wgcurrent{
     border: none!important;
+}
+.wg-drop.country-selector .wgcurrent a{
+    padding-right: 30px!important;
 }
